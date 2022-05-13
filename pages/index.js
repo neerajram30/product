@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Searchbar from '../components/Searchbar'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
+import Products from '../components/Products'
 
 export default function Home() {
   const [data,setData] = useState([]);
@@ -26,6 +27,7 @@ export default function Home() {
 
       <main >
         <Searchbar data={data}/>
+        <Products data={data}/>
         
       </main>
 
