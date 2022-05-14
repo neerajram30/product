@@ -13,7 +13,13 @@ export const fetchProducts = () =>
     
 
 
+export const fetchProduct = (id) =>
 
+ async (dispatch)=>{
+    const response = await fakeStore.get(`/products/${id}`);
+    dispatch({type:ActionTypes.SELECTED_PRODUCT, payload:response.data})
+    console.log(response.data);
+}
 
 export const setProducts = (products) =>{
     return{

@@ -34,7 +34,8 @@ export default function Home() {
       </Head>
 
       <main >
-        <Searchbar/>
+        <Navbar/>
+        {/* <Searchbar/> */}
         <Products/>
         
       </main>

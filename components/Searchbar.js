@@ -51,7 +51,7 @@ function Searchbar() {
     <Center mt={2}>
 
 
-    <Flex direction={{ base: 'column'}} w="75%"  >
+    <Flex direction={{ base: 'column'}} w={{base:"75%", md:"60%",sm:"75%"}}  >
       
 
 
@@ -59,6 +59,8 @@ function Searchbar() {
     <InputLeftElement
       pointerEvents='none'
       children={<Search2Icon/>}
+      bg='blue.600'
+      color='white'
     />
     <Input type='text' placeholder='Search the products' value={text}
     onChange={e=>
@@ -66,12 +68,12 @@ function Searchbar() {
     }
     />
   </InputGroup>
-  <Box  border='1px' borderColor='white' borderTopColor="white">
+  <Box   zIndex={1} bg='white' ml={5} mt={2}>
 
   {suggesions && 
   suggesions.map((suggesion, i)=>
-  <Link href={suggesion.id} key={i} mt={2}>
-          <Flex  mt={2} w="30%" >
+  <Link href={suggesion.id} key={i} mt={4} >
+          <Flex  mt={2} w="90%">
         <Center w={50} h={50}>
         <Image src={suggesion.image} mr={10} />
         </Center>    
