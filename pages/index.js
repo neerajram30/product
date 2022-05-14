@@ -1,20 +1,28 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Searchbar from '../components/Searchbar'
-import {useState,useEffect} from 'react'
+import {useEffect} from 'react'
 import axios from 'axios'
 import Products from '../components/Products'
+import { useDispatch,useSelector } from 'react-redux'
+import { setProducts,fetchProducts } from '../store/actions/Productactions'
 
 export default function Home() {
-  const [data,setData] = useState([]);
-  useEffect(() => {
-    const loadUsers = async()=>{
-        const response = await axios.get('https://fakestoreapi.com/products');
-        setData(response.data);
-      }
-      loadUsers();
-      
-  }, [])
+  //  const dispach = useDispatch();
+
+
+  //  const loadProducts = async()=>{
+  //      const response = await axios.get('https://fakestoreapi.com/products').
+  //      catch((err)=>{
+  //        console.log("error",err);
+  //      });
+  //      dispach(setProducts(response.data))
+  //    }
+
+
+  //  useEffect(() => {
+  //      dispach(fetchProducts());
+  //  }, [])
 
 
   return (
@@ -26,8 +34,8 @@ export default function Home() {
       </Head>
 
       <main >
-        <Searchbar data={data}/>
-        <Products data={data}/>
+        <Searchbar/>
+        <Products/>
         
       </main>
 
