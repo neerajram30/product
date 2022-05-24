@@ -12,8 +12,6 @@ function Products() {
     
     useEffect(() => {
       dispach(fetchProducts());
-
-
     }, [])
     
   return (
