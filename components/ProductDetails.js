@@ -19,7 +19,7 @@ function ProductDetails() {
   return (
     <Flex flexDirection={{base:'column',md:'row'}}>
       <Box ml={{md:"10%",base:"2%"}} mt="10%" >
-    <Image src={product.image} w='350px' h="auto"/>
+    <Image src={product.image} w='350px' h="auto" alt="product" />
       </Box>
       <Box ml="13%" mt="5%" w={{md:"30%", base:"80%"}}>
         <Text fontSize="1.4em">

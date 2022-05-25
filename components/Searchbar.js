@@ -70,7 +70,7 @@ function Searchbar() {
   <Box   zIndex={1} bg='white' ml={5} mt={2}>
 
   {suggesions && 
-  suggesions.map((suggesion, i)=>
+  suggesions.map((suggesion, i)=>{
   <Link href={suggesion.id} key={i} mt={4} >
           <Flex  mt={2} w="90%">
         <Center w={50} h={50}>
@@ -78,7 +78,7 @@ function Searchbar() {
         </Center>    
         <Flex ml={5}>{suggesion.title}</Flex>
         </Flex>
-        </Link>
+        </Link>}
 )
 }
 </Box>
