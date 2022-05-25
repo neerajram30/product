@@ -1,6 +1,6 @@
 import React from 'react'
 import Searchbar from './Searchbar'
-import {Flex,Text,Box} from '@chakra-ui/react'
+import {Flex,Box} from '@chakra-ui/react'
 function Navbar() {
   return (
     <nav>

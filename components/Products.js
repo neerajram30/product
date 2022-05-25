@@ -1,12 +1,10 @@
-import React,{useState,useEffect} from 'react'
-import {Box,Grid,Center,Heading,Text} from '@chakra-ui/react'
+import React,{useEffect} from 'react'
+import {Box,Grid,Center,Text} from '@chakra-ui/react'
 import { Image,Link } from '@chakra-ui/react'
 import {useSelector,useDispatch} from 'react-redux'
-import axios from 'axios'
 import {fetchProducts} from '../store/actions/Productactions'
 
 function Products() {
-    const [products,setProducts] = useState([])
     const data = useSelector((state)=>state);
     const dispach = useDispatch();
     

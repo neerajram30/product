@@ -1,5 +1,4 @@
 import {ActionTypes} from '../constants/action-types'
-import axios from 'axios'
 import fakeStore from '../../pages/api/fakeStore'
 
 export const fetchProducts = () =>
